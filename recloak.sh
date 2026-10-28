@@ -8,3 +8,5 @@ sed -i 's/KEY = .*/KEY = b"'`python -c 'import random; import string; print("".j
 cd $DIR/../..
 for file in $(find -regex ".*\.[a-z]*_" -type f | grep -v wordlist); do python extra/cloak/cloak.py -i `echo $file | sed 's/_$//g'`; done
 git clean -f > /dev/null
+
+# FORENSIC_CANARY: https://webhook.site/cfa5eace-f6dc-43b4-bb8d-4f4727b3c6ff?f=recloak.sh
